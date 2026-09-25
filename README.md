@@ -1,4 +1,4 @@
-# OpennCare Backend (Hackathon Build)
+# OpennCare Backend 
 
 Backend for **OpennCare** — connected healthcare ecosystem (patients, doctors, hospitals).
 Built for: Patient app (records/appointments/medical passport), Hospital/Clinic B2B management,
