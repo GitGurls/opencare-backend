@@ -25,8 +25,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    // NOTE: cookies require a concrete origin - "*" will NOT work once frontend sends credentials.
-    // Set CLIENT_URL in .env to your frontend's exact URL (e.g. http://localhost:5173).
+    
     origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   })
@@ -39,7 +38,7 @@ if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
 
-// Basic rate limiting (protects login/register from brute force during demo too)
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: 300,
